@@ -3,16 +3,12 @@ import { createApp } from "@shopify/app-bridge";
 export const useAppInit = (tenant: string) => {
   switch (tenant) {
     case "shopify": {
-      console.log("initializing shopify app");
       initShopify();
       break;
     }
-    case "wix": {
-      console.log("initializing wix app");
+    case "wix":
+    case "wordpress":
       break;
-    }
-    default:
-      throw new Error(`Unknown tenant: ${tenant}`);
   }
 };
 
