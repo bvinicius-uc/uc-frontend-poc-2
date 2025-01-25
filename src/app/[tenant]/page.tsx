@@ -1,8 +1,10 @@
 import { TenantPageProps } from "@/presentation/interfaces/page-props";
+import HomeView from "@/presentation/views/HomeView";
 
-export default async function IndexController(props: TenantPageProps) {
+export default async function TenantController(props: TenantPageProps) {
   const params = await props.params;
+
   const { tenant } = params;
 
-  return <h1>Hello {tenant}!</h1>;
+  return <HomeView tenant={tenant} />;
 }
